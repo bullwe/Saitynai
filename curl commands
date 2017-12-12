@@ -1,0 +1,33 @@
+COACHES
+
+GET
+curl -u matas:slaptas -i http://localhost:8080/coaches
+
+GET by id
+curl -i http://localhost:5000/todo/api/v1.0/coaches/2
+
+POST
+curl -i -H "Content-Type: application/json" -X POST -d '{"name":"Rimas","surname":"Kurtinaitis","team":"Lietuvos rytas"}' http://localhost:5000/todo/api/v1.0/coaches
+
+DELETE
+curl -X "DELETE" http://localhost:5000/todo/api/v1.0/coaches/4
+
+PUT
+curl -H "Content-Type: application/json" -X PUT -d '{"name":"Veteranas"}' http://localhost:5000/todo/api/v1.0/players/3
+
+PLAYERS
+
+GET
+curl -i http://localhost:5000/todo/api/v1.0/players
+
+GET by id
+curl -i http://localhost:5000/todo/api/v1.0/players/2
+
+POST
+curl -i -H "Content-Type: application/json" -X POST -d '{"name":"Paulius","surname":"Valinskas","height":189,"weight":80,"position":"Guard","coach_id":1}' http://localhost:8080/players
+
+PUT
+curl -H "Content-Type: application/json" -X PUT -d '{"coach_id":3}' http://localhost:5000/todo/api/v1.0/players/3
+
+DELETE
+curl -X "DELETE" http://localhost:5000/todo/api/v1.0/players/6
